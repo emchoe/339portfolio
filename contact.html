@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="imgs/email.png"/>
+  <title>Connect</title>
+</head>
+<body>
+    <nav>
+        <div class="flex-container">
+            <div class="logo">
+                <img src="images/goodlogo.jpg" alt="A logo with the initals 'EC'"/>
+              </div>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html">About me</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Connect</a></li>
+        </ul>
+      </nav>
+      <main class="contact">
+      <header id="contact">
+        <h1>Hi! I'm Emily <span class="wave">👋</span> </h1>
+        <p> Let's connect!</p>
+      </header>
+  <form action="https://formspree.io/f/mjvprbea" method="POST">
+  <fieldset>
+    <legend>Send me a message</legend>
+    <label for="name_id">Your Name</label>
+    <input type="text" 
+      name = "name"
+      id = "name_id"
+      placeholder="Enter Your Name" required>
+
+   
+    <label for="email_id">Your Email</label>
+    <input type="email" 
+    name = "Email"
+    id = "email_id"
+    placeholder="Enter Your Email" required>
+
+
+    <label for="phone_id">Your Phone Number</label>
+    <input type="tel"
+    name="phone"
+    id="phone_id"
+    placeholder="123-456-7890"
+    pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    required>
+    <div><span>Format: 123-456-7890</span></div>
+
+
+    <label for="msg">Leave A Message</label> 
+
+    <textarea name = "Message"
+    id = "msg"
+    placeholder="Enter your message" required ></textarea>
+
+
+    <input type="checkbox" name = "Remember" id="cBox">
+    <label for = "cBox">Remember me</label>
+
+    <input type="submit" 
+    value = "Send me a message">
+  </fieldset>
+ </form>
+ <footer>
+    <p> Created by Emily Choe 2020 &copy; </p>
+  </footer>
+</body>
+</html>
