@@ -18,7 +18,32 @@ body{
       width: 100px;
       height: auto;
   }
-
+  .topnav {
+    background-color: #E6E6FA;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #6A5ACD;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .topnav a:hover {
+    border-bottom: 3px solid#D8BFD8;
+  }
+  
+  .topnav a.active {
+    border-bottom: 3px solid #6A5ACD;
+    text-decoration: underline;
+  }
   nav li{
     display: inline-flex;
     flex-grow: inherit;
@@ -50,21 +75,21 @@ body{
 
 
   .wave {
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;        /* Change to speed up or slow down */
-    animation-iteration-count: 2;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    animation-name: wave-animation;
+    animation-duration: 2.5s; 
+    animation-iteration-count: 2; 
+    transform-origin: 70% 70%;      
     display: inline-block;
   }
   
   @keyframes wave-animation {
       0% { transform: rotate( 0.0deg) }
-     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     10% { transform: rotate(14.0deg) }
      20% { transform: rotate(-8.0deg) }
      30% { transform: rotate(14.0deg) }
      40% { transform: rotate(-4.0deg) }
      50% { transform: rotate(10.0deg) }
-     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+     60% { transform: rotate( 0.0deg) }
     100% { transform: rotate( 0.0deg) }
   }
 
@@ -273,3 +298,9 @@ body{
   }
   }
   
+  @media screen and (prefers-reduced-motion: reduce){
+    .wave{
+        animation: none;
+  
+    }
+  }
